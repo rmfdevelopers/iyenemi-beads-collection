@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Playfair_Display, Outfit } from "next/font/google";
 import "./globals.css";
 
-const heading = Cormorant_Garamond({ 
+const headingFont = Playfair_Display({ 
   subsets: ["latin"], 
-  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-heading" 
 });
 
-const body = DM_Sans({ 
+const bodyFont = Outfit({ 
   subsets: ["latin"], 
-  weight: ["300", "400", "500", "700"],
   variable: "--font-body" 
 });
 
 export const metadata: Metadata = {
-  title: "Iyenemi Beads Collection | Luxury Nigerian Bridal Beads",
-  description: "Exquisite traditional beadwork and cultural wedding styling for royalty, celebrities, and discerning families across the globe.",
+  title: "Iyenemi Beads Collection | Royal Nigerian Bridal Adornments",
+  description: "Port Harcourt's premier destination for regal cultural adornments and bespoke bridal beads.",
 };
 
 export default function RootLayout({
@@ -25,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${heading.variable} ${body.variable} font-sans antialiased`}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>
         {children}
       </body>
     </html>
