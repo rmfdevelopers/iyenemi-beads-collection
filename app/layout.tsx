@@ -1,30 +1,27 @@
-import type { Metadata } from "next";
-import { Playfair_Display, Outfit } from "next/font/google";
-import "./globals.css";
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
+import './globals.css';
 
-const headingFont = Playfair_Display({ 
-  subsets: ["latin"], 
-  variable: "--font-heading" 
+const heading = Cormorant_Garamond({ 
+  subsets: ['latin'], 
+  weight: ['300', '400', '500', '600', '700'], 
+  variable: '--font-heading' 
 });
 
-const bodyFont = Outfit({ 
-  subsets: ["latin"], 
-  variable: "--font-body" 
+const body = DM_Sans({ 
+  subsets: ['latin'], 
+  weight: ['300', '400', '500', '700'], 
+  variable: '--font-body' 
 });
 
-export const metadata: Metadata = {
-  title: "Iyenemi Beads Collection | Royal Nigerian Bridal Adornments",
-  description: "Port Harcourt's premier destination for regal cultural adornments and bespoke bridal beads.",
+export const metadata = {
+  title: 'Iyenemi Beads Collection | Heritage Meets Royal Elegance',
+  description: 'Handcrafted cultural masterpieces for the modern royalty. Bespoke bridal beads and luxury accessories.',
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>
+    <html lang="en">
+      <body className={`${heading.variable} ${body.variable} font-sans`}>
         {children}
       </body>
     </html>

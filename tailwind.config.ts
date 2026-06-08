@@ -7,14 +7,14 @@ const config: Config = {
       colors: {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
-        accent: "var(--accent)"
+        accent: "var(--accent)",
       },
       fontFamily: {
         heading: ["var(--font-heading)"],
-        sans: ["var(--font-body)"]
-      }
-    }
+        sans: ["var(--font-body)"],
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
 export default config;
